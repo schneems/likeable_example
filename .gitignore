@@ -1,0 +1,9 @@
+.autotest
+log/*
+tmp/*
+*~
+TODO.txt
+pendencias.txt
+coverage/*
+public/system/*
+public/cache/*

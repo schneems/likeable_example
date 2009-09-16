@@ -1,0 +1,8 @@
+== Devise Example
+
+Example App using devise
+
+== License
+
+MIT License. Copyright 2009 Plataforma Tecnologia.
+
