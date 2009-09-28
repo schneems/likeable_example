@@ -6,12 +6,6 @@ class SessionsController < ApplicationController
 
   def create
     redirect_to root_path if authenticated?
-#    if authenticate
-#      redirect_to root_path
-#    else
-#      flash.now[:error] = warden.message if warden.message.present?
-#      render :new
-#    end
   end
 
   def destroy
