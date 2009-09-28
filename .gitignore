@@ -7,3 +7,4 @@ pendencias.txt
 coverage/*
 public/system/*
 public/cache/*
+*.sqlite3
