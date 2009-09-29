@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  skip_before_filter :authenticate!, :only => :new
+  before_filter :authenticate!, :except => :new
 
   def new
   end

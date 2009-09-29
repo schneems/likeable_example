@@ -8,11 +8,9 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   filter_parameter_logging :password
 
-  before_filter :authenticate!
-
   private
 
     def require_no_authentication
-      redirect_to root_path if logged_in?
+      redirect_to root_path if authenticated?
     end
 end

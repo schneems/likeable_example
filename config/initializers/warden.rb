@@ -7,11 +7,12 @@ end
 # Declare your strategies here
 Warden::Strategies.add(:devise) do
   def valid?
-    params[:email].present? || params[:password].present?
+    params[:session] ||= {}
+    params[:session][:email].present? && params[:session][:password].present?
   end
 
   def authenticate!
-    if user = User.authenticate(params[:email], params[:password])
+    if user = User.authenticate(params[:session][:email], params[:session][:password])
       success!(user)
     else
       fail!(I18n.t(:failed_login, :scope => :devise, :default => 'Invalid email or password'))

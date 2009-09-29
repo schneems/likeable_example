@@ -2,26 +2,6 @@ require 'test_helper'
 
 class AuthenticationTest < ActionController::IntegrationTest
 
-  def warden
-    request.env['warden']
-  end
-
-  def create_user(options={})
-    @user ||= User.create!(
-      :email => 'test@test.com', :password => '123456', :password_confirmation => '123456'
-    )
-    @user.confirm! unless options[:confirm] == false
-  end
-
-  def sign_in(options={}, &block)
-    create_user(options)
-    visit '/'
-    fill_in 'email', :with => 'test@test.com'
-    fill_in 'password', :with => '123456'
-    yield if block_given?
-    click_button 'Sign In'
-  end
-
   test 'not authenticated user should load up sign in form' do
     visit '/'
     assert_response :success
@@ -57,7 +37,7 @@ class AuthenticationTest < ActionController::IntegrationTest
     assert !warden.authenticated?
   end
 
-  test 'when user is authenticated should not open sign in form' do
+  test 'already confirmed user should be able to sign in successfully' do
     sign_in
 
     assert_response :success

@@ -28,4 +28,4 @@ config.action_mailer.delivery_method = :test
 # config.active_record.schema_format = :sql
 
 #config.gem "rack-test", :lib => "rack/test", :version => '0.5.0'
-config.gem 'webrat', :lib => false, :version => '0.5.3'
+config.gem 'webrat', :version => '0.5.3'
