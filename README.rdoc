@@ -2,7 +2,18 @@
 
 Example App using devise
 
+== Installation
+
+Use git submodule to update devise inside vendor/plugins:
+
+  git submodule init && git submodule update
+
+Rake devise setup task to create and migrate the database, and create a default user:
+
+  rake devise:setup
+
+Run the server and use the credentials provided by the rake task to sign in and test the application.
+
 == License
 
 MIT License. Copyright 2009 Plataforma Tecnologia.
-
