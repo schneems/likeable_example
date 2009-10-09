@@ -14,8 +14,8 @@
 
       <% if logged_in? -%>
         <div id="login_box" style="float:right">
-          <%= user.email %> |
-          <%= link_to 'Sair', session_path, :method => :delete %>
+          <%= user.email %> | <%= link_to 'My info', edit_user_path %> |
+          <%= link_to 'Sign out', session_path, :method => :delete %>
         </div>
       <% end -%>
 
