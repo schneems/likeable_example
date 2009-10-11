@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :authenticate!
+  before_filter :user_authenticate!
 
   def edit
     @user = current_user

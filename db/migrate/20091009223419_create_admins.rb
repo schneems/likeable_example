@@ -4,6 +4,8 @@ class CreateAdmins < ActiveRecord::Migration
       t.string :email,              :null => false
       t.string :encrypted_password, :null => false
       t.string :password_salt,      :null => false
+      t.string :perishable_token,   :null => false
+      t.datetime :confirmed_at
 
       t.timestamps
     end
