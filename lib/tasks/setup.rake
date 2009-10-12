@@ -17,7 +17,7 @@ namespace :devise do
       u.password = 'admin123'
       u.password_confirmation = 'admin123'
     end
-    admin.confirm!
+    #admin.confirm!
     puts 'New admin created!'
     puts 'Email   : ' << admin.email
     puts 'Password: ' << admin.password
