@@ -1,3 +1,9 @@
 <h1>Hello!</h1>
-<p><%= link_to 'Login as Admin', new_admin_session_path %></p>
-<p><%= link_to 'Login as User', new_user_session_path %></p>
+<% unless admin_signed_in? -%>
+  <p><%= link_to 'Login as Admin', new_admin_session_path %></p>
+<% end -%>
+<% unless user_signed_in? -%>
+  <p><%= link_to 'Login as User', new_user_session_path %></p>
+<% end -%>
+
+<p>Hello World!</p>

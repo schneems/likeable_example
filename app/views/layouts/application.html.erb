@@ -12,18 +12,18 @@
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <%- end -%>
 
-      <% if signed_in?(:user) -%>
+      <%= link_to 'Home', root_path %>
+
+      <% if user_signed_in? -%>
         <div id="user_login_box" style="float:right">
-          <%= current_user(:user).email %> |
-          <%= link_to 'Home', root_path %> |
+          <%= current_user.email %> |
           <%= link_to 'My info', edit_user_path %> |
           <%= link_to 'Sign out', user_session_path, :method => :delete %>
         </div>
       <% end -%>
-      <% if signed_in?(:admin) -%>
+      <% if admin_signed_in? -%>
         <div id="admin_login_box" style="float:left">
-          <%= current_user(:admin).email %> |
-          <%= link_to 'Home', root_path %> |
+          <%= current_admin.email %> |
           <%= link_to 'Admin section', admins_path %> |
           <%= link_to 'Sign out', admin_session_path, :method => :delete %>
         </div>
