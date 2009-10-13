@@ -1,7 +1,7 @@
 namespace :devise do
 
   desc 'setup devise example migrating db and creating a default user'
-  task :setup => ['db:create', 'db:migrate', 'environment'] do
+  task :setup => ['db:drop', 'db:create', 'db:migrate', 'environment'] do
     user = User.create! do |u|
       u.email = 'user@test.com'
       u.password = 'user123'

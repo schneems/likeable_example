@@ -1,19 +1,30 @@
 == Devise Example
 
-Example App using devise
+Example App using devise. http://github.com/plataformatec/devise
 
 == Installation
+
+Install warden gem if you don't have it installed:
+
+  sudo gem install warden
 
 Use git submodule to update devise inside vendor/plugins:
 
   git submodule init && git submodule update
 
-Rake devise setup task to create and migrate the database, and create a default user:
+Rake devise setup task:
 
   rake devise:setup
+
+This will:
+
+* drop any existing database
+* create a new database
+* migrate the database
+* create a default user and admin
 
 Run the server and use the credentials provided by the rake task to sign in and test the application.
 
 == License
 
-MIT License. Copyright 2009 Plataforma Tecnologia.
+MIT License. Copyright 2009 Plataforma Tecnologia. http://blog.plataformatec.com.br
