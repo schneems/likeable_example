@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.devise_for :user, :admin
+  map.devise_for :users, :admin
 
   map.resources :home, :only => :index
   map.resource :user, :only => [:edit, :update]
