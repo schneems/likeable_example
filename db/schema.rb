@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(:version => 20091009223419) do
     t.string   "email",              :null => false
     t.string   "encrypted_password", :null => false
     t.string   "password_salt",      :null => false
-    t.string   "perishable_token",   :null => false
+    t.string   "perishable_token"
     t.datetime "confirmed_at"
     t.datetime "created_at"
     t.datetime "updated_at"
