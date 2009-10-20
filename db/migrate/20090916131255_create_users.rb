@@ -8,6 +8,7 @@ class CreateUsers < ActiveRecord::Migration
       t.datetime :confirmation_sent_at
       t.datetime :confirmed_at
       t.string   :reset_password_token
+      t.string   :remember_token
 
       t.timestamps
     end
