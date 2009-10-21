@@ -1,3 +1,0 @@
-[submodule "vendor/plugins/devise"]
-	path = vendor/plugins/devise
-	url = git://github.com/plataformatec/devise.git
