@@ -12,21 +12,21 @@
 ActiveRecord::Schema.define(:version => 20091009223419) do
 
   create_table "admins", :force => true do |t|
-    t.string   "email",              :null => false
-    t.string   "encrypted_password", :null => false
-    t.string   "password_salt",      :null => false
+    t.string   "email",              :limit => 100, :null => false
+    t.string   "encrypted_password", :limit => 40,  :null => false
+    t.string   "password_salt",      :limit => 20,  :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                :null => false
-    t.string   "encrypted_password",   :null => false
-    t.string   "password_salt",        :null => false
-    t.string   "confirmation_token"
+    t.string   "email",                :limit => 100, :null => false
+    t.string   "encrypted_password",   :limit => 40,  :null => false
+    t.string   "password_salt",        :limit => 20,  :null => false
+    t.string   "confirmation_token",   :limit => 40
     t.datetime "confirmation_sent_at"
     t.datetime "confirmed_at"
-    t.string   "reset_password_token"
+    t.string   "reset_password_token", :limit => 40
     t.datetime "created_at"
     t.datetime "updated_at"
   end
