@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20091009223419) do
     t.datetime "confirmation_sent_at"
     t.datetime "confirmed_at"
     t.string   "reset_password_token", :limit => 40
+    t.string   "remember_token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
