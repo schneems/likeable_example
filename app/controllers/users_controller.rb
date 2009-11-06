@@ -1,6 +1,24 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_user!
-
+  before_filter :authenticate_user!, :only => [:edit, :update]
+  
+  def new
+    @user = User.new
+  end
+  
+  def create
+    @user = User.new(params[:user])
+    
+    if @user.save
+      flash[:success] = @user.respond_to?(:confirm!) ? 
+                         t('devise.confirmations.send_instructions') :
+                         t('flash.users.create.notice', :default => 'User was successfully created.')
+      
+      redirect_to root_url
+    else
+      render :new
+    end
+  end
+  
   def edit
     @user = current_user
   end
