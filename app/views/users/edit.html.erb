@@ -17,3 +17,5 @@
     <p class="submit"><%= f.submit 'Update password' %></p>
   <% end -%>
 <% end -%>
+
+<%= link_to "Cancel my account", user_path, :method => :delete, :confirm => "Are you sure?" %>

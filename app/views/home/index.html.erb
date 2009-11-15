@@ -1,10 +1,10 @@
 <h1>Hello!</h1>
 <% unless admin_signed_in? -%>
-  <p><%= link_to 'Login as Admin', new_admin_session_path %></p>
+  <p><%= link_to 'Sign in as Admin', new_admin_session_path %></p>
 <% end -%>
 <% unless user_signed_in? -%>
-  <p><%= link_to 'Login as User', new_user_session_path %></p>
-  <p><%= link_to 'Sign Up as User', new_user_path %></p>
+  <p><%= link_to 'Sign in as User', new_user_session_path %></p>
+  <p><%= link_to 'Sign up as User', new_user_path %></p>
 <% end -%>
 
 <p>Hello World!</p>
