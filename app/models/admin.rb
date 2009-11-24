@@ -1,3 +1,3 @@
 class Admin < ActiveRecord::Base
-  devise :validatable
+  devise :authenticatable, :validatable
 end
