@@ -5,6 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.confirmable
       t.recoverable
       t.rememberable
+      t.trackable
       t.timestamps
     end
   end
