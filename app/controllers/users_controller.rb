@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     if @user.save
       if @user.respond_to?(:confirm!)
         flash[:success] = t('devise.confirmations.send_instructions')
-        sign_in @user if @user.confirm_within > 0
+        sign_in @user if @user.class.confirm_within > 0
       else
         flash[:success] = t('flash.users.create.notice', :default => 'User was successfully created.')
       end

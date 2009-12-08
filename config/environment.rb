@@ -8,7 +8,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
   config.gem 'warden', :version => '0.6.4'
-  config.gem 'devise', :version => '0.6.2'
+  config.gem 'devise', :version => '0.7.0'
   config.gem 'rails-footnotes', :version => '3.6.3'
 
   config.time_zone = 'UTC'
