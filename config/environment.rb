@@ -7,7 +7,7 @@ RAILS_GEM_VERSION = '2.3.4' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
-  config.gem 'warden', :version => '0.6.4'
+  config.gem 'warden', :version => '0.6.5'
   config.gem 'devise', :version => '0.7.0'
   config.gem 'rails-footnotes', :version => '3.6.3'
 
