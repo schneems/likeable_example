@@ -4,13 +4,9 @@ Example App using devise. http://github.com/plataformatec/devise
 
 == Installation
 
-Install warden gem if you don't have it installed:
+Install warden and devise gems if you don't have them installed:
 
-  sudo gem install warden
-
-Use git submodule to update devise inside vendor/plugins:
-
-  git submodule init && git submodule update
+  sudo gem install warden devise
 
 Rake devise setup task:
 
