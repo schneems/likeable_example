@@ -1,10 +1,17 @@
 # Use this hook to configure devise mailer, warden hooks and so forth. The first
 # four configuration values can also be set straight in your models.
 Devise.setup do |config|
-  # Configure the frameworks used by default. You should always set this value
-  # because if Devise add a new strategy, it won't be added to your application
+  # Configure Devise modules used by default. You should always set this value
+  # because if Devise adds a new strategy, it won't be added to your application
   # by default, unless you configure it here.
-  config.all = [:authenticatable, :confirmable, :recoverable, :rememberable, :timeoutable, :trackable, :validatable]
+  #
+  # Remember that Devise includes other modules on its own (like :activatable
+  # and :timeoutable) which are not included here and also plugins. So be sure
+  # to check the docs for a complete set.
+  config.all = Devise::ALL
+
+  # Configure the e-mail address which will be shown in DeviseMailer.
+  config.mailer_sender = "please-change-me@config-initializers-devise.com"
 
   # Invoke `rake secret` and use the printed value to setup a pepper to generate
   # the encrypted password. By default no pepper is used.
@@ -14,10 +21,10 @@ Devise.setup do |config|
   # config.stretches = 10
 
   # Define which will be the encryption algorithm. Supported algorithms are :sha1
-  # (default) and :sha512. Devise also supports encryptors from others authentication
-  # frameworks as :clearance_sha1, :authlogic_sha512 (then you should set stretches
-  # above to 20 for default behavior) and :restful_authentication_sha1 (then you
-  # should set stretches to 10, and copy REST_AUTH_SITE_KEY to pepper)
+  # (default), :sha512 and :bcrypt. Devise also supports encryptors from others
+  # authentication tools as :clearance_sha1, :authlogic_sha512 (then you should set
+  # stretches above to 20 for default behavior) and :restful_authentication_sha1
+  # (then you should set stretches to 10, and copy REST_AUTH_SITE_KEY to pepper)
   # config.encryptor = :sha1
 
   # Configure which keys are used when authenticating an user. By default is
@@ -38,16 +45,24 @@ Devise.setup do |config|
   # time the user will be asked for credentials again.
   # config.timeout_in = 10.minutes
 
-  # Configure the e-mail address which will be shown in DeviseMailer.
-  # config.mailer_sender = "foo.bar@yourapp.com"
-
-  # Configure the ORM. Supports :active_record, :data_mapper and :mongo_mapper.
-  # config.orm = :active_record
+  # Load and configure the ORM. Supports :active_record, :data_mapper and :mongo_mapper.
+  # require 'devise/orm/mongo_mapper'
+  # config.orm = :mongo_mapper
 
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "sessions/users/new". It's turned off by default because it's slower if you
   # are using only default views.
   # config.scoped_views = true
+
+  # By default, devise detects the role accessed based on the url. So whenever
+  # accessing "/users/sign_in", it knows you are accessing an User. This makes
+  # routes as "/sign_in" not possible, unless you tell Devise to use the default
+  # scope, setting true below.
+  # config.use_default_scope = true
+
+  # Configure the default scope used by Devise. By default it's the first devise
+  # role declared in your routes.
+  # config.default_scope = :user
 
   # If you want to use other strategies, that are not (yet) supported by Devise,
   # you can configure them inside the config.warden block. The example below
