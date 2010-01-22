@@ -23,7 +23,7 @@ Run the server and use the credentials provided by the rake task to sign in and 
 
 The example is using "rails-footnotes":http://github.com/josevalim/rails-footnotes gem. If you don't have it installed, run the following command to install the gem:
 
-  sudo gem install josevalim-rails-footnotes
+  sudo gem install rails-footnotes
 
 If you don't want to install this gem, just comment the line in the environment.rb file.
 

@@ -20,9 +20,9 @@ ActiveRecord::Schema.define(:version => 20091009223419) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                :limit => 100, :null => false
-    t.string   "encrypted_password",   :limit => 40,  :null => false
-    t.string   "password_salt",        :limit => 20,  :null => false
+    t.string   "email",                :limit => 100,                :null => false
+    t.string   "encrypted_password",   :limit => 40,                 :null => false
+    t.string   "password_salt",        :limit => 20,                 :null => false
     t.string   "confirmation_token",   :limit => 20
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
@@ -34,6 +34,9 @@ ActiveRecord::Schema.define(:version => 20091009223419) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.integer  "failed_attempts",                     :default => 0
+    t.string   "unlock_token",         :limit => 20
+    t.datetime "locked_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
