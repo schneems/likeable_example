@@ -17,7 +17,7 @@
       <% if user_signed_in? -%>
         <div id="user_login_box" style="float:right">
           <%= current_user.email %> |
-          <%= link_to 'My info', edit_user_path %> |
+          <%= link_to 'My info', edit_user_registration_path %> |
           <%= link_to 'Sign out', destroy_user_session_path %>
         </div>
       <% end -%>
