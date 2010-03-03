@@ -3,6 +3,9 @@
 Devise.setup do |config|
   # Configure the e-mail address which will be shown in DeviseMailer.
   config.mailer_sender = "please-change-me@config-initializers-devise.com"
+  
+  # Configure the content type of DeviseMailer mails (defaults to text/html")
+  # config.mailer_content_type = "text/plain"
 
   # ==> Configuration for :authenticatable
   # Invoke `rake secret` and use the printed value to setup a pepper to generate
@@ -25,6 +28,9 @@ Devise.setup do |config|
   # parameters are used only when authenticating and not when retrieving from
   # session. If you need permissions, you should implement that in a before filter.
   # config.authentication_keys = [ :email ]
+
+  # The realm used in Http Basic Authentication
+  # config.http_authentication_realm = "Application"
 
   # ==> Configuration for :confirmable
   # The time you want give to your user to confirm his account. During this time
@@ -52,6 +58,10 @@ Devise.setup do |config|
 
   # Time interval to unlock the account if :time is enabled as unlock_strategy.
   # config.unlock_in = 1.hour
+
+  # ==> Configuration for :token_authenticatable
+  # Defines name of the authentication token params key
+  # config.token_authentication_key = :auth_token
 
   # ==> General configuration
   # Load and configure the ORM. Supports :active_record (default), :mongo_mapper
@@ -89,7 +99,6 @@ Devise.setup do |config|
 
   # Configure default_url_options if you are using dynamic segments in :path_prefix
   # for devise_for.
-  #
   # config.default_url_options do
   #   { :locale => I18n.locale }
   # end
