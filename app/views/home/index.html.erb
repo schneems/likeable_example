@@ -10,4 +10,8 @@
   <p><%= link_to 'Sign in as User', new_user_session_path %></p>
 <% end -%>
 
+<% if user_signed_in? -%>
+  <p><%= link_to 'Token Authentication Example', token_path(:auth_token => current_user.authentication_token) %></p>
+<% end -%>
+
 <p>Hello World!</p>

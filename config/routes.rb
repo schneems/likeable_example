@@ -5,4 +5,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :admins, :only => [:index]
 
   map.root :controller => :home
+  
+  map.token '/token', :controller => 'home', :action => 'token'
 end
