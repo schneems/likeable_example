@@ -1,15 +1,18 @@
-== Devise Example
+== Devise Example for Rails 3
 
 Example App using devise. http://github.com/plataformatec/devise
 
 == Installation
 
-Install warden and devise gems if you don't have them installed:
+Install bundler if you haven't yet:
 
-  sudo gem install rails -v=2.3.5
-  sudo gem install warden -v=0.10.4
-  sudo gem install devise -v=1.0.7
-  sudo gem install rails-footnotes -v=3.6.5
+  gem install bundler
+
+Install the gems:
+
+  bundle install
+
+This will install Rails 3, sqlite3-ruby gem and Devise 1.1.2.
 
 Rake devise setup task:
 
@@ -26,4 +29,4 @@ Run the server and use the credentials provided by the rake task to sign in and 
 
 == License
 
-MIT License. Copyright 2009 Plataforma Tecnologia. http://blog.plataformatec.com.br
+MIT License. Copyright 2010 Plataforma Tecnologia. http://blog.plataformatec.com.br
