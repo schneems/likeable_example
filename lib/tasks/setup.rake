@@ -6,6 +6,7 @@ namespace :devise do
       u.email = 'user@test.com'
       u.password = 'user123'
       u.password_confirmation = 'user123'
+      u.ensure_authentication_token!
     end
     user.confirm!
     puts 'New user created!'
