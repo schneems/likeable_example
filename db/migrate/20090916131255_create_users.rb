@@ -1,7 +1,7 @@
 class CreateUsers < ActiveRecord::Migration
   def self.up
     create_table :users do |t|
-      t.authenticatable
+      t.database_authenticatable
       t.confirmable
       t.recoverable
       t.rememberable
