@@ -8,19 +8,9 @@ namespace :devise do
       u.password_confirmation = 'user123'
       u.ensure_authentication_token!
     end
-    user.confirm!
     puts 'New user created!'
     puts 'Email   : ' << user.email
     puts 'Password: ' << user.password
 
-    admin = Admin.create! do |u|
-      u.email = 'admin@test.com'
-      u.password = 'admin123'
-      u.password_confirmation = 'admin123'
-    end
-    #admin.confirm!
-    puts 'New admin created!'
-    puts 'Email   : ' << admin.email
-    puts 'Password: ' << admin.password
   end
 end
