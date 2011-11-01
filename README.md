@@ -4,8 +4,9 @@ Example App using likeable (http://github.com/gowalla/likeable). Based on an exa
 
 ## Screencast
 
+You can view a [screencast of likeable on youtube](http://youtu.be/nINGHWqPz3I?hd=1)
 
-<iframe width="853" height="480" src="http://www.youtube.com/embed/nINGHWqPz3I?hd=1" frameborder="0" allowfullscreen></iframe>
+
 
 ## Installation
 
