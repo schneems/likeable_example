@@ -1,8 +1,14 @@
 # Devise Example for Rails 3
 
-Example App using devise. http://github.com/plataformatec/devise
+Example App using likeable (http://github.com/gowalla/likeable). Based on an example app using devise :) http://github.com/plataformatec/devise
 
 ## Installation
+
+Install [Redis](http://redis.io/) if it isn't already, if you're on a mac you can run install it using [homebrew](http://mxcl.github.com/homebrew/) :
+
+```
+brew install redis
+```
 
 Install bundler if you haven't yet:
 
@@ -16,12 +22,12 @@ Install the gems:
 bundle install
 ```
 
-This will install Rails 3, sqlite3-ruby gem and Devise 1.4.7.
+This will install Rails 3, sqlite3-ruby gem and Devise 1.4.7, and likeable.
 
 Rake devise setup task:
 
 ```
-rake devise:setup
+rake likeable:setup
 ```
 
 This will:
@@ -32,6 +38,8 @@ This will:
 * create a default user and admin
 
 Run the server and use the credentials provided by the rake task to sign in and test the application.
+
+Navigate to posts and try liking and unliking the post. Its that simple
 
 ## License
 
