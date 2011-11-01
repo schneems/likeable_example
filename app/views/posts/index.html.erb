@@ -6,6 +6,17 @@
     <p><%= post.name %></p>
     <p><%= post.content %></p>
     <p><%= post.user_id %></p>
+    <p>You <%= current_user.likes?(post) ? "like this!" : "haven't liked this" %></p>
+    <p>
+      Like Count: <%= post.like_count %>
+      <%= link_to "like it!!", like_path(:resource_name => post.class,
+                                         :resource_id   => post.id),
+                                         :method => :post %>
+     <%= link_to "unlike it!!", like_path(
+                                        :resource_name => post.class,
+                                        :resource_id   => post.id),
+                                        :method => :delete %>
+    </p>
     <p>
       <%= link_to 'Show', post %>
       <%= link_to 'Edit', edit_post_path(post) %>

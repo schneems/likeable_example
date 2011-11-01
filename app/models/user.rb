@@ -4,5 +4,6 @@ class User < ActiveRecord::Base
          :token_authenticatable
 
   attr_accessible :email, :password, :password_confirmation
-  has_many :posts
+
+  include Likeable::UserMethods
 end
