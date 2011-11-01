@@ -1,4 +1,4 @@
-# Devise Example for Rails 3
+# Likeable Example for Rails 3
 
 Example App using likeable (http://github.com/gowalla/likeable). Based on an example app using devise :) http://github.com/plataformatec/devise
 
