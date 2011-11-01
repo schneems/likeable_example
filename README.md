@@ -44,4 +44,4 @@ Navigate to posts and try liking and unliking the post. Its that simple
 
 ## License
 
-MIT License. Copyright 2010 Plataforma Tecnologia. http://blog.plataformatec.com.br
+MIT License. Copyright 2011 [schneems](http://schneems.com)
