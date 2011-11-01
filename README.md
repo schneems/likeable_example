@@ -2,6 +2,11 @@
 
 Example App using likeable (http://github.com/gowalla/likeable). Based on an example app using devise :) http://github.com/plataformatec/devise
 
+## Screencast
+
+
+<iframe width="853" height="480" src="http://www.youtube.com/embed/nINGHWqPz3I?hd=1" frameborder="0" allowfullscreen></iframe>
+
 ## Installation
 
 Install [Redis](http://redis.io/) if it isn't already, if you're on a mac you can run install it using [homebrew](http://mxcl.github.com/homebrew/) :
