@@ -10,6 +10,7 @@ Install [Redis](http://redis.io/) if it isn't already, if you're on a mac you ca
 brew install redis
 ```
 
+
 Install bundler if you haven't yet:
 
 ```
